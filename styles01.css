@@ -1,0 +1,144 @@
+img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  cursor: pointer;
+  transition: 0.5s ease; /* Add this line */
+
+  /* Add these lines for the zoom effect on hover */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  h1,p {
+    text-align: center;
+    
+  }
+  
+
+  .column {
+    float: left;
+    width:33.33%;
+    padding: 5px 0;
+    
+  }
+  .banner {
+    width: 100%;
+    
+    height: 100vh;
+    background: -webkit-linear-gradient(rgb(26, 26, 26));
+
+    background-size: cover; 
+    background-position: center;
+  }
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display:table;
+  }
+    
+  /* Styles for small devices */
+@media (max-width: 200px) {
+  .column {
+    width: 100%;
+    padding: 2px 0;
+    
+  }.navbar {
+  width: 100%;
+ 
+  padding:15px 0;
+  
+  align-items: center;
+  
+
+}
+
+.navbar ul li {
+  list-style: none;
+  display: block;
+  margin:10px 0;
+  position: relative;
+}
+}
+
+
+
+
+/* Styles for large devices */
+@media (min-width: 900px) {
+  .column {
+    width: 33.33%;
+    
+  }
+}
+
+.logo{
+  width: 140px;
+  height:140px;
+  margin-left:8% ;
+  cursor: pointer;
+  border-radius: 72px;
+
+}
+  .navbar {
+    width: 85%;
+    margin:auto;
+    padding:15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin:0 15px;
+    position: relative;
+  }
+
+  .navbar ul li a{
+    font-style: normal;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration:none;
+    
+    color: white;
+    text-transform: uppercase;
+  }
+  .navbar ul li ::after{
+    content: '';
+    height:3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    transition: 0.5s;
+
+  }
+  .navbar ul li :hover::after{
+    width:100%;
+
+  }
+  
